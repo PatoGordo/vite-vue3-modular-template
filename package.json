@@ -6,7 +6,9 @@
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
     "checkout": "eslint --fix . && prettier --write --ignore-unknown .",
-    "pre-commit": "eslint --fix . && prettier --write --ignore-unknown ."
+    "pre-commit": "eslint --fix . && prettier --write --ignore-unknown .",
+    "eslint": "eslint --fix .",
+    "prettier": "prettier --write --ignore-unknown ."
   },
   "dependencies": {
     "@vuedx/typescript-plugin-vue": "^0.7.4",
