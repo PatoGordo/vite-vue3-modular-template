@@ -1,19 +1,14 @@
 import { Router, RouteRecordRaw } from "vue-router";
 const Index = () => import("./views/Index.vue");
-const Page404 = () => import("./views/404.vue");
 const Module = () => import("./Module.vue");
 
 const moduleRouter: RouteRecordRaw = {
-  path: "/",
+  path: "/about",
   component: Module,
   children: [
     {
-      path: "/",
+      path: "/about",
       component: Index,
-    },
-    {
-      path: "/:pathMatch(.*)*",
-      component: Page404,
     },
   ],
 };

@@ -1,19 +1,18 @@
 import { createApp } from "vue";
-import { createWebHistory, createRouter } from "vue-router";
-import { ManageModule } from "./utils/manage-module";
+import router from "./router";
 
 import App from "./App.vue";
-import HomeModule from "./modules/Home";
-import Page404Module from "./modules/404";
 import "./shared/styles/global.scss";
 
-const router = createRouter({
-  history: createWebHistory(),
-  routes: [],
-});
+import { registerModules } from "./register-modules";
 
-ManageModule(HomeModule, router);
-ManageModule(Page404Module, router);
+import homeModule from "./modules/Home";
+import aboutModule from "./modules/About";
+
+registerModules({
+  about: aboutModule,
+  home: homeModule,
+});
 
 const app = createApp(App);
 app.use(router);

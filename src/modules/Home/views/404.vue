@@ -1,14 +1,12 @@
 <template>
-  <div>
-    <h2>404 - Page not found</h2>
-  </div>
+  <h2>404 - Page not found</h2>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "Home Page",
+  name: "Page404",
 });
 </script>
 
